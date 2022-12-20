@@ -1,24 +1,20 @@
 {
-  "header": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
-  },
-  "header.full": {
-    "blocks": [
-      "header-layout.desktop#desktop__header",
-      "header-layout.mobile#mobile__header"
-    ]
-  },
   "header-layout.desktop#desktop__header": {
     "children": ["sticky-layout#desktop"]
   },
+
   "sticky-layout#desktop": {
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#desktop"]
+    "children": ["flex-layout.row#desktop", "flex-layout.row#header__stripe"]
   },
+
   "flex-layout.row#desktop": {
     "props": {
+      "blockClass":[
+        "desktop__header"
+      ],
       "horizontalAlign": "center",
       "verticalAlign": "center",
       "preventHorizontalStretch": true,
@@ -29,52 +25,112 @@
       "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer",
       "search-bar",
-      "locale-switcher",
-      "login",
-      "minicart.v2"
+      // "locale-switcher",
+      "flex-layout.col#spacer",
+      "flex-layout.col#menus__right"
     ]
   },
+
+  "flex-layout.col#menus__right": {
+    "children":[
+      "flex-layout.row#menus__right"
+    ],
+    "props":{
+      "blockClass":[
+        "menus__right"
+      ]
+    }
+  },
+
+  "flex-layout.row#menus__right":{
+    "children":[
+      "login",
+      "minicart.v2"
+    ],
+    "props":{
+      "preventHorizontalStretch": true,
+      "blockClass":[
+        "menus__right"
+      ]
+    }
+  },
+
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
     }
   },
+
   "flex-layout.col#logo-desktop": {
     "props": {
       "verticalAlign": "middle"
     },
     "children": ["logo"]
   },
+
   "logo": {
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
-      "width": "80"
+      "url": "assets/logo-header.png",
+      "width": "200"
     }
   },
-  "header-layout.mobile#mobile__header": {
-    "children": ["sticky-layout#mobile"]
-  },
-  "sticky-layout#mobile": {
-    "children": ["flex-layout.row#mobile"]
-  },
-  "flex-layout.row#mobile": {
-    "children": [
-      "drawer",
-      "logo",
+
+  "flex-layout.row#header__stripe": {
+    "children":[
+      "shopper-location",
+      "rich-text#headStripe1",
+      "rich-text#headStripe2",
+      "rich-text#headStripe3",
+      "rich-text#headStripe4",
+      "rich-text#headStripe5",
       "flex-layout.col#spacer",
-      "login",
-      "minicart.v2"
+      "check-permission#reseller"
     ],
     "props": {
-      "blockClass": "main-header-mobile",
+      "horizontalAlign": "left",
+      "verticalAlign": "center",
       "preventHorizontalStretch": true,
-      "preserveLayoutOnMobile": true,
-      "fullWidth": true
+      "preventVerticalStretch": true,
+      "blockClass":[
+        "desktop__stripe"
+      ]
     }
   },
-  "drawer": {
-    "children": []
+
+  "rich-text#headStripe1": {
+    "props": {
+      "blockClass": "HeaderStripeText",
+      "text": "[Today's Deals](#)"
+    }
+  },
+
+  "rich-text#headStripe2": {
+    "props": {
+      "blockClass": "HeaderStripeText",
+      "text": "[New Releases](#)"
+    }
+  },
+
+  "rich-text#headStripe3": {
+    "props": {
+      "blockClass": "HeaderStripeText",
+      "text": "[Top Sales](#)"
+    }
+  },
+
+  "rich-text#headStripe4": {
+    "props": {
+      "blockClass": "HeaderStripeText",
+      "text": "[Costumer Services](#)"
+    }
+  },
+
+  "rich-text#headStripe5": {
+    "props": {
+      "blockClass": "HeaderStripeText",
+      "text": "[Gift Cards](#)"
+    }
   }
 }

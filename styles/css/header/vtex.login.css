@@ -1,0 +1,4 @@
+.container :global(.vtex-button){
+    width: 50px !important;
+    border: none;
+}

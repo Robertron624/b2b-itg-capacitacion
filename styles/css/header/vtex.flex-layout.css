@@ -1,0 +1,12 @@
+.flexRow--desktop__header{
+    background-color: #620ad6;
+}
+
+.flexRowContent--desktop__header{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flexRow--desktop__stripe{
+    background-color: #6f1dda;
+}

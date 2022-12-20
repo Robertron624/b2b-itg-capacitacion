@@ -1,0 +1,97 @@
+{
+    "check-permission#reseller": {
+        "props": {
+          "roles": [
+            "store-admin",
+            "sales-admin",
+            "sales-manager",
+            "sales-representative",
+            "customer-admin",
+            "customer-approver",
+            "customer-buyer"
+          ]
+        },
+        "blocks": [
+          "allowed-content#reseller",
+          "disallowed-content#reseller"
+        ]
+      },
+
+      "allowed-content#reseller": {
+        "children": [
+          "link#order__quote"
+        ],
+        "props": {
+          "blockClass": "reseller__challenge--content"
+        }
+      },
+
+      "disallowed-content#reseller": {
+        "children": [
+          "link#reseller"
+        ],
+        "props": {
+          "blockClass": "reseller__challenge--fallback"
+        }
+      },
+
+      "check-permission#login": {
+        "props": {
+          "roles": [
+            "store-admin",
+            "sales-admin",
+            "sales-manager",
+            "sales-representative",
+            "customer-admin",
+            "customer-approver",
+            "customer-buyer"
+          ]
+        },
+        "blocks": [
+          "allowed-content#reseller",
+          "disallowed-content#reseller"
+        ]
+      },
+
+      "allowed-content#login": {
+        "children": [
+          "link#profile"
+        ],
+        "props": {
+          "blockClass": "login__challenge--content"
+        }
+      },
+
+      "disallowed-content#login": {
+        "children": [
+          "login"
+        ],
+        "props": {
+          "blockClass": "login__challenge--fallback"
+        }
+      },
+
+      "link#order__quote": {
+        "props": {
+          "label": "My Quotes",
+          "href": "/b2b-quotes",
+          "blockClass": "order__quote"
+        }
+      },
+    
+      "link#profile": {
+        "children": ["icon-profile"],
+        "props": {
+          "href": "/account",
+          "blockClass": "account__link"
+        }
+      },
+
+      "link#reseller": {
+        "props": {
+          "label": "Organization Signup",
+          "href": "/organization-request",
+          "blockClass": "reseller__link"
+        }
+      }
+}
