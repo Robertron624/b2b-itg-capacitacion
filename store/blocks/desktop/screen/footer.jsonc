@@ -4,23 +4,227 @@
   },
   "footer-layout.desktop": { 
     "children": [
-      "flex-layout.row#footer"
-    ]
-  },
-  "footer-layout.mobile": { 
-    "children": [
-      "flex-layout.row#footer"
-    ]
-  },
-  "flex-layout.row#footer": { 
-    "children": [
-      "image"
-    ]
-  },
-  "image": {
+      "flex-layout.row#footer__desktop",
+      "flex-layout.row#copyright",
+      "flex-layout.row#footer__stripe"
+    ],
     "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
+      "blockClass": ["relative", "z-998", "footer__layout"]
+    }
+  },
+
+  "flex-layout.row#footer__stripe": {
+    "props": {
+      "blockClass": [
+        "footer_stripe"
+      ]
+    },
+    "children": [
+      "rich-text#footer__stripe"
+    ]
+  },
+
+  "rich-text#footer__stripe": {
+    "props": {
+      "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc",
+      "blockClass": "footer__stripe"
+    }
+  },
+
+  "flex-layout.row#footer__desktop": {
+    "props": {
+      "blockClass": "footer-row-1"
+    },
+    "children": [
+      "flex-layout.col#footer__1--desktop",
+      "flex-layout.col#footer__2--desktop",
+      "flex-layout.col#footer__3--desktop",
+      "flex-layout.col#footer__4--desktop"
+    ]
+  },
+
+  "flex-layout.col#footer__1--desktop": {
+    "children": [
+      "rich-text#footer__title--1", 
+      "flex-layout.row#footer__menu--about"
+    ]
+  },
+  "flex-layout.col#footer__2--desktop": {
+    "children": [
+      "rich-text#footer__title--2",
+      "flex-layout.row#footer__menu--customer"
+    ]
+  },
+
+  "flex-layout.col#footer__3--desktop": {
+    "props": {
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#footer__title--3", 
+      "link#call", 
+      "link#mail"
+    ]
+  },
+
+  "flex-layout.col#footer__4--desktop": {
+    "children": [
+      "rich-text#footer__title--4",
+      "flex-layout.row#payment__images--desktop",
+      "rich-text#follow__title",
+      "flex-layout.row#networks"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    }
+  },
+
+  "rich-text#follow__title": {
+    "props": {
+      "text": "Follow us",
+      "blockClass": [
+        "follow__title"
+      ]
+    }
+  },
+
+  "rich-text#footer__title--1": {
+    "props": {
+      "text": "About us",
+      "blockClass": ["footer__title"]
+    }
+  },
+
+  "rich-text#footer__title--2": {
+    "props": {
+      "text": "Costumer Service",
+      "blockClass": ["footer__title"]
+    }
+  },
+
+  "rich-text#footer__title--3": {
+    "props": {
+      "text": "Contact Us",
+      "blockClass": ["footer__title"]
+    }
+  },
+
+  "rich-text#footer__title--4": {
+    "props": {
+      "text": "Pay with credit card",
+      "blockClass": ["footer__title"]
+    }
+  },
+
+  "link#call": {
+    "children": ["image#phone__icon", "rich-text#call"],
+    "props": {
+      "href": "tel:+1999999999",
+      "target": "_blank",
+      "blockClass": "link__call"
+    }
+  },
+
+  "link#mail": {
+    "children": ["image#mail__icon", "rich-text#mail"],
+    "props": {
+      "href": "mailto:mailto@mail.com",
+      "target": "_blank",
+      "blockClass": "link__mail"
+    }
+  },
+
+  "image#phone__icon": {
+    "props": {
+      "src": "assets/icons/phoneIcon.svg"
+    }
+  },
+
+  "image#mail__icon": {
+    "props": {
+      "src": "assets/icons/mailIcon.svg"
+    }
+  },
+
+  "rich-text#call": {
+    "props": {
+      "text": "call us",
+      "blockClass": [
+        "call"
+      ]
+    }
+  },
+
+  "rich-text#mail": {
+    "props": {
+      "text": "send a message",
+      "blockClass": [
+        "mail"
+      ]
+    }
+  },
+
+  "flex-layout.row#copyright": {
+    "props": {
+      "colSizing": "auto",
+      "blockClass": "copyright__container"
+    },
+    "children": [
+      "flex-layout.col#copyright"
+      // "flex-layout.col#spacer"
+    ]
+  },
+
+  "flex-layout.col#copyright": {
+    "props": {
+      "blockClass":[
+        "copyright"
+      ]
+    },
+    "children": [
+      "flex-layout.row#vtex__logo"
+    ]
+  },
+
+  "flex-layout.row#vtex__logo": {
+    "props": {
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "image#vtex__logo", 
+      "rich-text#rights"
+    ]
+  },
+
+  "image#vtex__logo": {
+    "props": {
+      "blockClass": [
+        "vtex__logo"
+      ],
+      "src": "assets/placeholders/vtexLogo.png"
+    }
+  },
+
+  "rich-text#rights": {
+    "props": {
+      "text": "2020 @ All Right Reserved to VTEX",
+      "blockClass": "footerRights"
+    }
+  },
+
+  "flex-layout.row#payment__images--desktop": {
+    "children": [
+      "image#visa",
+      "image#mastercard",
+      "image#express",
+      "image#elo",
+      "image#dinners"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": "paymentImages"
     }
   }
+
 }

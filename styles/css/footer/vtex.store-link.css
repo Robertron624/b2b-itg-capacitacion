@@ -1,0 +1,4 @@
+.childrenContainer--link__mail, .childrenContainer--link__call{
+    display: flex;
+    gap: 1rem;
+}

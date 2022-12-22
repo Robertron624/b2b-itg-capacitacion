@@ -1,10 +1,21 @@
 {
   "store.home": {
-    "blocks": ["flex-layout.row#desktop__home"]
+    "blocks": ["flex-layout.row#desktop__home"],
+    "parent": {
+      "challenge": "challenge.trade-policy-condition"
+    }
   },
+
+  "challenge.trade-policy-condition": {
+    "props": {
+      "redirectPath": "/login"
+    }
+  },
+
   "flex-layout.row#desktop__home": {
     "children": ["rich-text"]
   },
+
   "rich-text": {
     "props": {
       "text": "VTEX Store B2B",

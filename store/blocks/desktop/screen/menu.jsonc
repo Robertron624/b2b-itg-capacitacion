@@ -1,0 +1,213 @@
+{
+  "flex-layout.row#footer__menu--about": {
+    "children": ["flex-layout.col#footer__menu--about"]
+  },
+
+  "flex-layout.col#footer__menu--about": {
+    "children": [
+      "rich-text#our__company",
+      "rich-text#careers",
+      "rich-text#sell__with",
+      "rich-text#investor__relationship",
+      "rich-text#advertise__with",
+      "rich-text#locations"
+    ]
+  },
+
+  "rich-text#our__company": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Our Company",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#careers": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Careers",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#sell__with": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Sell with us",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#investor__relationship": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Investor Relations",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#advertise__with": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Advertise with us",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#locations": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Locations",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "flex-layout.row#footer__menu--customer": {
+    "children": ["flex-layout.col#footer__menu--customer"]
+  },
+
+  "flex-layout.col#footer__menu--customer": {
+    "children": [
+      "rich-text#help__center",
+      "rich-text#returns",
+      "rich-text#recalls",
+      "rich-text#accessibility",
+      "rich-text#contact",
+      "rich-text#pickup"
+    ]
+  },
+
+  "rich-text#help__center": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Help Center",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#returns": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Returns",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#recalls": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Product Recalls",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#accessibility": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Accessibility",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#contact": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Contact Us",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#pickup": {
+    "props": {
+      "blockClass": ["about__us"],
+      "text": "Store Pickup",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "menu#costumer": {
+    "props": {
+      "blockClass": "flexCol",
+      "items": [
+        {
+          "id": "footerItem-help",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/help-center",
+            "noFollow": false,
+            "tagTitle": "Help Center",
+            "text": "Help Center"
+          }
+        },
+        {
+          "id": "footerItem-returns",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/returns",
+            "noFollow": false,
+            "tagTitle": "Returns",
+            "text": "Returns"
+          }
+        },
+        {
+          "id": "footerItem-recall",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/recalls",
+            "noFollow": false,
+            "tagTitle": "Product Recalls",
+            "text": "Product Recalls"
+          }
+        },
+        {
+          "id": "footerItem-accessibility",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/accessibility",
+            "noFollow": false,
+            "tagTitle": "Accessibility",
+            "text": "Accessibility"
+          }
+        },
+        {
+          "id": "footerItem-contact",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/contact",
+            "noFollow": false,
+            "tagTitle": "Contact Us",
+            "text": "Contact Us"
+          }
+        },
+        {
+          "id": "footerItem-pickup",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/pickup",
+            "noFollow": false,
+            "tagTitle": "Store Pickup",
+            "text": "Store Pickup"
+          }
+        }
+      ]
+    }
+  }
+}

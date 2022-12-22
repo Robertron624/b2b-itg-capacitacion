@@ -7,7 +7,7 @@
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#desktop", "flex-layout.row#header__stripe"]
+    "children": ["flex-layout.row#desktop", "flex-layout.row#header__stripe--container"]
   },
 
   "flex-layout.row#desktop": {
@@ -77,14 +77,10 @@
     }
   },
 
-  "flex-layout.row#header__stripe": {
+  "flex-layout.row#header__stripe--container": {
     "children":[
       "shopper-location",
-      "rich-text#headStripe1",
-      "rich-text#headStripe2",
-      "rich-text#headStripe3",
-      "rich-text#headStripe4",
-      "rich-text#headStripe5",
+      "flex-layout.col#header__stripe",
       "flex-layout.col#spacer",
       "check-permission#reseller"
     ],
@@ -99,37 +95,64 @@
     }
   },
 
+  "flex-layout.col#header__stripe": {
+    "children":[
+      "flex-layout.row#header__stripe"
+    ],
+    "props":{
+      "blockClass":[
+        "desktop__stripe"
+      ]
+    }
+  },
+
+  "flex-layout.row#header__stripe": {
+    "children":[
+      "rich-text#headStripe1",
+      "rich-text#headStripe2",
+      "rich-text#headStripe3",
+      "rich-text#headStripe4",
+      "rich-text#headStripe5"
+    ],
+    "props":{
+      "blockClass":[
+        "header__menus"
+      ],
+      "preventHorizontalStretch":true
+    }
+  },
+
   "rich-text#headStripe1": {
     "props": {
-      "blockClass": "HeaderStripeText",
-      "text": "[Today's Deals](#)"
+      "blockClass": "header__stripe--text",
+      "text": "[Today's Deals](/deals)"
     }
   },
 
   "rich-text#headStripe2": {
     "props": {
-      "blockClass": "HeaderStripeText",
+      "blockClass": "header__stripe--text",
       "text": "[New Releases](#)"
     }
   },
 
   "rich-text#headStripe3": {
     "props": {
-      "blockClass": "HeaderStripeText",
+      "blockClass": "header__stripe--text",
       "text": "[Top Sales](#)"
     }
   },
 
   "rich-text#headStripe4": {
     "props": {
-      "blockClass": "HeaderStripeText",
+      "blockClass": "header__stripe--text",
       "text": "[Costumer Services](#)"
     }
   },
 
   "rich-text#headStripe5": {
     "props": {
-      "blockClass": "HeaderStripeText",
+      "blockClass": "header__stripe--text",
       "text": "[Gift Cards](#)"
     }
   }

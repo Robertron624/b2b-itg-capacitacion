@@ -1,0 +1,204 @@
+{
+  "footer-layout.mobile": {
+    "children": ["flex-layout.row#footer__mobile"]
+  },
+
+  "flex-layout.row#footer__mobile": {
+    "props":{
+        "blockClass": "footer__mobile"
+    },
+    "children": [
+      "flex-layout.row#footer__menu",
+      "flex-layout.col#payment",
+      "flex-layout.row#networks",
+      "rich-text#copyright__mobile",
+      "rich-text#footer__text--mobile",
+      "image#vtex__logo--mobile"
+    ]
+  },
+
+  "flex-layout.row#footer__menu": {
+    "children": [
+      "link#footer__link--1",
+      "link#footer__link--2",
+      "link#footer__link--3",
+      "link#footer__link--4",
+      "link#footer__link--5",
+      "link#footer__link--6"
+    ],
+    "props": {
+      "blockClass": ["footer__link"]
+    }
+  },
+
+  "link#footer__link--1": {
+    "props": {
+      "href": "/about",
+      "label": "About us",
+      "blockClass": ["footer__link"]
+    }
+  },
+
+  "link#footer__link--2": {
+    "props": {
+      "href": "/policy",
+      "label": "Return Policy",
+      "blockClass": ["footer__link"]
+    }
+  },
+
+  "link#footer__link--3": {
+    "props": {
+      "href": "/orders",
+      "label": "Your orders",
+      "blockClass": ["footer__link"]
+    }
+  },
+
+  "link#footer__link--4": {
+    "props": {
+      "href": "/service",
+      "label": "Costumer service",
+      "blockClass": ["footer__link"]
+    }
+  },
+
+  "link#footer__link--5": {
+    "props": {
+      "href": "/shipping",
+      "label": "Shipping info",
+      "blockClass": ["footer__link"]
+    }
+  },
+
+  "link#footer__link--6": {
+    "props": {
+      "href": "/support",
+      "label": "Contact & Support",
+      "blockClass": ["footer__link"]
+    }
+  },
+
+  "flex-layout.col#payment": {
+    "children": ["rich-text#payment", "flex-layout.row#payment__images"],
+    "props": {
+      "blockClass": ["payment__col"]
+    }
+  },
+
+  "rich-text#payment": {
+    "props": {
+      "text": "Pay with credit card",
+      "blockClass": ["payment__label"]
+    }
+  },
+
+  "flex-layout.row#payment__images": {
+    "children": [
+      "image#visa",
+      "image#mastercard",
+      "image#express",
+      "image#elo",
+      "image#dinners"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "payment__images"
+    }
+  },
+
+  "image#visa": {
+    "props": {
+      "src": "assets/placeholders/visaLogo.png",
+      "blockClass": "payment__image"
+    }
+  },
+
+  "image#mastercard": {
+    "props": {
+      "src": "assets/placeholders/masterCardLogo.png",
+      "blockClass": "payment__image"
+    }
+  },
+  
+  "image#express": {
+    "props": {
+      "src": "assets/placeholders/expressLogo.png",
+      "blockClass": "payment__image"
+    }
+  },
+
+  "image#elo": {
+    "props": {
+      "src": "assets/placeholders/eloLogo.png",
+      "blockClass": "payment__image"
+    }
+  },
+
+  "image#dinners": {
+    "props": {
+      "src": "assets/placeholders/dinnersLogo.png",
+      "blockClass": "payment__image"
+    }
+  },
+
+  "rich-text#copyright__mobile": {
+    "props": {
+      "text": "2020 @ All Right Reserved to VTEX",
+      "blockClass": "copyright"
+    }
+  },
+
+  "rich-text#footer__text--mobile": {
+    "props": {
+      "text": "Amet minim mollit non deserunt ullamco est sit aliqua do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt amet.",
+      "blockClass": "footer__stripe"
+    }
+  },
+
+  "image#vtex__logo--mobile": {
+    "props": {
+      "src": "assets/placeholders/vtexLogo.png",
+      "blockClass": [
+        "vtex__logo"
+    ]
+    }
+  },
+
+  "flex-layout.row#networks": {
+    "children": ["image#facebook", "image#instagram", "image#twitter"],
+    "props": {
+      "blockClass": [
+        "networks"
+    ],
+      "horizontalAlign": "center",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "colGap": 3,
+      "colSizing": "auto",
+      "fullWidth": false
+    }
+  },
+
+  "image#facebook": {
+    "props": {
+      "src": "assets/placeholders/facebookIcon.png",
+      "blockClass": ["network__image"]
+    }
+  },
+
+  "image#instagram": {
+    "props": {
+      "src": "assets/placeholders/instagramIcon.png",
+      "blockClass": ["network__image"]
+    }
+  },
+
+  "image#twitter": {
+    "props": {
+      "src": "assets/placeholders/twitterIcon.png",
+      "blockClass": ["network__image"]
+    }
+  }
+
+}

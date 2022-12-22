@@ -10,3 +10,12 @@
 .flexRow--desktop__stripe{
     background-color: #6f1dda;
 }
+
+.flexRow--desktop__stripe--container{
+    padding: 1rem 2rem;
+}
+
+.flexRowContent--header__menus{
+    gap: 2rem;
+    margin-left: 2rem;
+}
